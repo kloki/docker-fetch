@@ -1,7 +1,7 @@
 use std::{io, io::IsTerminal};
 
 use container::Container;
-use printer::pprint;
+use printer::Printer;
 mod container;
 mod printer;
 fn read_from_stdin() -> io::Result<Option<String>> {
@@ -25,6 +25,7 @@ fn main() {
         return;
     };
 
-    let container: Vec<Container> = serde_json::from_str(&input).unwrap();
-    println!("{}", pprint(&container[0]));
+    let containers: Vec<Container> = serde_json::from_str(&input).unwrap();
+    let print = Printer::new(containers[0].clone());
+    println!("{}", print.print());
 }
