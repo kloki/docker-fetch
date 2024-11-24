@@ -1,6 +1,6 @@
 # Docker fetch
 
-Intended to be used as a preview for (fzf)[https://github.com/junegunn/fzf]
+Intended to be used as a preview for [fzf](ttps://github.com/junegunn/fzf)
 
 # Example: Pick a container and shell into.
 
